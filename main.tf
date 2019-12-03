@@ -5,7 +5,7 @@ resource "aws_vpc" "main-vpc" {
 
 # Create subnet
 resource "aws_subnet" "main-subnet" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = var.cidr
   vpc_id = aws_vpc.main-vpc.id
 }
 
