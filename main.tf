@@ -13,7 +13,6 @@ resource "aws_subnet" "main-subnet" {
 # Create internet gateway
 resource "aws_internet_gateway" "main-igw" {
   vpc_id = aws_vpc.main-vpc.id
-  availability_zone = var.az
 }
 
 # Create routing table
