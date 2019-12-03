@@ -3,7 +3,7 @@ output "showCIDR" {
 }
 
 output "main-subnet-id" {
-  value = aws_vpc.main-subnet.id
+  value = aws_subnet.main-subnet.id
 }
 
 output "main-vpc-id" {
