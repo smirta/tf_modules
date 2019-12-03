@@ -1,7 +1,6 @@
 # Create a VPC
 resource "aws_vpc" "main-vpc" {
   cidr_block = var.cidr
-  availability_zone = var.az
 }
 
 # Create subnet
