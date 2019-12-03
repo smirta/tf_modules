@@ -19,7 +19,6 @@ resource "aws_internet_gateway" "main-igw" {
 # Create routing table
 resource "aws_route_table" "main-route" {
   vpc_id = aws_vpc.main-vpc.id
-  availability_zone = var.az
  
   route {
     cidr_block = "0.0.0.0/0"
@@ -31,5 +30,4 @@ resource "aws_route_table" "main-route" {
 resource "aws_route_table_association" "main-subnet-assoc" {
   subnet_id      = aws_subnet.main-subnet.id
   route_table_id = aws_route_table.main-route.id
-  availability_zone = var.az
 }
